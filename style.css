@@ -75,7 +75,7 @@ footer {
 
 body {
     background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
-    background-image: url('/image.png'); /* Background image */
+    background-image: url('image.png'); /* Background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
