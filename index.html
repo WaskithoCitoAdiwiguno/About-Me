@@ -47,7 +47,7 @@
             text-align: center;
         }
         
-        #about, #projects, #skills {
+        #about {
             background-color: #fff;
             margin: 20px auto;
             width: 80%;
@@ -55,6 +55,16 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
+        /* Untuk membuat tulisan Projects lebih jelas */
+        #projects h2 {
+            color: #ffffff; /* Warna putih untuk kontras */
+            font-size: 28px; /* Ukuran font lebih besar */
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Bayangan untuk memperjelas teks */
+            margin-bottom: 20px; /* Menambahkan jarak di bawah judul */
+        }
+
         .project-list {
             display: flex;
             justify-content: space-around;
@@ -142,12 +152,18 @@
             font-size: 26px;
         }
         
+        .app-cct {
+            margin-top: auto;
+            font-size: 12px;
+            color: #888;
+        }
+
         .app-contact {
             margin-top: auto;
             font-size: 12px;
             color: #888;
         }
-        
+
         .app-form-group {
             margin-bottom: 15px;
         }
@@ -160,6 +176,10 @@
             text-align: right;
         }
         
+        .projects.h2 {
+            color: #fff;
+        }
+
         .app-form-control {
             width: 100%;
             padding: 10px 0;
@@ -189,7 +209,62 @@
             color: #b9134f;
             transform: scale(1.05);
         }
-        
+/*CSS Skills*/
+        #skills {
+    /*background: linear-gradient(to right, #f0f4f8, #d9e2ec);*/
+    padding: 40px;
+    border-radius: 8px;
+    
+}
+
+/* Untuk membuat tulisan Skills di tengah */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    font-size: 30px;
+    color: #34a0a4;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+#skills h2 {
+    color: #ffffff; /* Warna putih untuk kontras */
+    font-size: 28px; /* Ukuran font lebih besar */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Bayangan untuk memperjelas teks */
+    margin-bottom: 20px; /* Menambahkan jarak di bawah judul */
+}
+ 
         /* Responsiveness */
         @media (max-width: 768px) {
             nav ul {
@@ -200,7 +275,11 @@
             #about, #projects, #skills {
                 width: 90%;
             }
-        
+            
+            h2 {
+                color: #fff;
+            }
+
             .project-card {
                 width: 45%;
             }
@@ -253,12 +332,16 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Introduce yourself here. Mention your background, interests, and goals.</p>
+        <p>Introduce yourself here. Mention your background, interests, and goals. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum soluta impedit, ipsum maiores consectetur quibusdam laboriosam non quaerat! Aperiam repudiandae necessitatibus illo, corporis fuga ex, accusantium voluptas in cupiditate earum nesciunt? Quibusdam nostrum fuga beatae suscipit, officia cupiditate exercitationem reiciendis inventore odit voluptatem. Dolor ut consectetur similique quos quas laudantium. Nostrum, quae. Distinctio neque eum, assumenda doloribus adipisci ullam consequatur aliquid enim? Neque quasi necessitatibus porro iure omnis nesciunt accusantium velit, ipsa ullam a voluptatum non quia culpa provident tempora molestiae dolor modi mollitia eum quidem debitis quo minima! Dignissimos impedit alias quaerat, nulla facilis ipsa ipsam velit nam cum?</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-list">
+            <div class="project-card">
+                <h3>AkunPOS</h3>
+                <p>itung.in.my.id/</p>
+            </div>
             <div class="project-card">
                 <h3>Project Title</h3>
                 <p>Short description of the project.</p>
@@ -267,14 +350,49 @@
         </div>
     </section>
 
-    <section id="skills">
+    <div id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li><i class="fas fa-paint-brush"></i> FrontEnd Designer</li>
-            <li><i class="fas fa-cogs"></i> GoLang</li>
-            <li><i class="fab fa-js-square"></i> JavaScript</li>
-        </ul>
-    </section>
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="skill-icon fas fa-pencil-alt"></i>
+                <p class="skill-name">FrontEnd Designer</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fas fa-code"></i>
+                <p class="skill-name">GoLang</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fas fa-code"></i>
+                <p class="skill-name">GoCroot</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fab fa-js-square"></i>
+                <p class="skill-name">JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fab fa-js-square"></i>
+                <p class="skill-name">JSCroot</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fab fa-python"></i> <!-- Ikon Python -->
+                <p class="skill-name">Python</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fab fa-php"></i> <!-- Ikon PHP -->
+                <p class="skill-name">PHP</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fas fa-database"></i> <!-- Ikon SQL (database) -->
+                <p class="skill-name">SQL</p>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon fab fa-java"></i> <!-- Ikon Java -->
+                <p class="skill-name">Java Fundamentals</p>
+            </div>
+        </div>
+    </div>
+    
+    
     
 
 <section id="contact">
