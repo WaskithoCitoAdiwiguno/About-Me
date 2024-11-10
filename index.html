@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -328,6 +329,105 @@
             background-color: #000000;
         }
         
+        /* style.css */
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#about-me {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo img {
+    width: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05);
+}
+
+.about-content {
+    max-width: 500px;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h1 .highlight {
+    color: #00FF00; /* Warna hijau terang */
+}
+
+.fun-facts {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.fact {
+    background-color: #00FF00; /* Warna hijau terang */
+    color: #121212;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #00FF00;
+    margin-top: 20px;
+}
+
+.intro {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    margin-bottom: 10px;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Layout responsif */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-content, .profile-photo {
+        max-width: 100%;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -343,13 +443,36 @@
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello, my name is Waskitho Cito Adiwiguno. I am a dedicated student currently studying at the University of Logistics and International Business (ULBI). My journey in education has taken me from elementary through high school, and now to my university studies in IT, where I've developed a passion for technology and programming.
-
-            With experience in building various projects such as a POS application, an accounting tool, and a guides app, I've honed my skills in both front-end and back-end development. My career goal is to become a skilled UI/UX developer, though I also enjoy working on the backend.
+    <section id="about-me">
+        <div class="container">
+            <!-- Bagian Foto Profil -->
+            <div class="profile-photo">
+                <img src="your-photo.jpg" alt="Profile Photo">
+            </div>
             
-            Outside of my studies and work, I enjoy relaxing activities like a casual jog, indulging in good food, and—most importantly—enjoying a coffee in the late afternoon.</p>
+            <!-- Bagian Teks About Me -->
+            <div class="about-content">
+                <h1>Hello, I'm <span class="highlight">Waskitho!</span></h1>
+                <p class="intro">I'm a dedicated student with a passion for technology and design. I specialize in UI/UX and love working on projects that solve real-world problems.</p>
+
+                <!-- Kotak Fakta Singkat (Fun Facts) -->
+                <div class="fun-facts">
+                    <div class="fact">🏃 Suka jogging sore</div>
+                    <div class="fact">☕ Pecinta kopi</div>
+                    <div class="fact">💻 Proyek favorit: POS App</div>
+                </div>
+
+                <!-- Bagian Subheading Ringkas -->
+                <h2>Background</h2>
+                <p>I have a background in Computer Science and am currently exploring web development. I enjoy building user-friendly interfaces and love to keep up with the latest design trends.</p>
+
+                <h2>Projects and Skills</h2>
+                <p>Skilled in HTML, CSS, JavaScript, and React. Some of my recent projects include a portfolio website, a POS app, and a blog platform.</p>
+
+                <h2>Hobbies and Interests</h2>
+                <p>Outside of coding, I love reading, exploring coffee shops, and going for evening jogs. These activities keep me refreshed and inspired!</p>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
