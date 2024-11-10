@@ -339,9 +339,12 @@ body {
 }
 
 #about-me {
-    padding: 50px 20px;
-    max-width: 800px;
+    padding: 60px 20px;
+    max-width: 900px;
     margin: auto;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparan */
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -352,8 +355,9 @@ body {
 }
 
 .profile-photo img {
-    width: 200px;
+    width: 180px;
     border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s;
 }
 
@@ -368,20 +372,24 @@ body {
 
 h1 {
     font-size: 2.5em;
+    background: linear-gradient(90deg, #00FF7F, #32CD32); /* Gradien hijau lembut */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h1 .highlight {
-    color: #00FF00; /* Warna hijau terang */
+    color: #00FF7F;
 }
 
 .fun-facts {
     display: flex;
     gap: 10px;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .fact {
-    background-color: #00FF00; /* Warna hijau terang */
+    background-color: #32CD32; /* Warna hijau lembut */
     color: #121212;
     padding: 5px 10px;
     border-radius: 8px;
@@ -389,12 +397,12 @@ h1 .highlight {
 }
 
 h2 {
-    color: #00FF00;
+    color: #00FF7F;
     margin-top: 20px;
 }
 
 .intro {
-    background-color: #333;
+    background-color: rgba(50, 50, 50, 0.8); /* Latar belakang semi-transparan */
     padding: 15px;
     border-radius: 8px;
     color: #ddd;
@@ -403,6 +411,7 @@ h2 {
 
 .about-content p {
     margin-bottom: 10px;
+    color: #f0f0f0;
 }
 
 /* Animasi fade-in */
@@ -417,14 +426,81 @@ h2 {
     }
 }
 
-/* Layout responsif */
-@media (max-width: 600px) {
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    #about-me {
+        padding: 40px 15px;
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
     }
-    .about-content, .profile-photo {
+
+    .profile-photo img {
+        width: 120px; /* Ukuran gambar profil lebih kecil di layar seluler */
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .about-content {
         max-width: 100%;
+        text-align: center;
+    }
+
+    .fun-facts {
+        justify-content: center;
+    }
+
+    .fact {
+        padding: 8px;
+        font-size: 0.9em; /* Ukuran teks lebih kecil di layar seluler */
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+        padding: 0 10px; /* Memberikan sedikit padding untuk kenyamanan membaca */
+    }
+}
+
+/* Responsif untuk layar yang lebih kecil lagi */
+@media (max-width: 480px) {
+    #about-me {
+        padding: 30px 10px;
+    }
+
+    .profile-photo img {
+        width: 100px; /* Ukuran lebih kecil lagi untuk layar kecil */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .fun-facts {
+        flex-direction: column; /* Menyusun fakta dalam satu kolom */
+        gap: 5px;
+    }
+
+    .fact {
+        padding: 6px;
+        font-size: 0.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-top: 15px;
+    }
+
+    p {
+        font-size: 0.9em;
     }
 }
 
